@@ -18,7 +18,6 @@
   "homepage": "https://github.com/jennasisis/xkcd-bot#readme",
   "dependencies": {
     "discord.js": "^11.2.1",
-    "explainxkcd": "^1.0.0",
     "xkcd": "^1.1.3"
   }
 }
