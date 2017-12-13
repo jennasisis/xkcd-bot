@@ -1,0 +1,23 @@
+{
+  "name": "xkcd-bot",
+  "version": "1.0.0",
+  "description": "my contestant to Gallium's xkcd bot that can't seem to stay online",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jennasisis/xkcd-bot.git"
+  },
+  "author": "jennasisis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jennasisis/xkcd-bot/issues"
+  },
+  "homepage": "https://github.com/jennasisis/xkcd-bot#readme",
+  "dependencies": {
+    "discord.js": "^11.2.1",
+    "xkcd": "^1.1.3"
+  }
+}
