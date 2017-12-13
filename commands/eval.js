@@ -4,6 +4,8 @@ module.exports.run = (client, message, args) => {
     const config = require('../config.json');
     const package = require('../package.json');
     const packlock = require('../package-lock.json');
+    const xkcd = require('xkcd');
+    const Discord = require('discord.js');
 
     function clean(text) {
         if (typeof(text) === "string")
