@@ -6,6 +6,7 @@ module.exports.run = (client, message, args) => {
     const packlock = require('../package-lock.json');
     const xkcd = require('xkcd');
     const Discord = require('discord.js');
+    const modules = require('../node_modules/');
 
     function clean(text) {
         if (typeof(text) === "string")
