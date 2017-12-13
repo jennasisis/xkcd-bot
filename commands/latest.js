@@ -32,9 +32,10 @@ module.exports.run = (client, message, args) => {
         
         message.channel.send(new Discord.RichEmbed()
             .setColor('0xFFFFFF')
-            .setTitle(data.title)
             .setDescription(data.alt)
-            .setFooter(`Published: ${month} ${day}, ${data.year}`)
+            .setFooter(`Published: ${month} ${day}, ${data.year} | #${data.num}`)
+            .setAuthor(data.title, null, `http://xkcd.com/${data.num}/`)
+            .setImage(data.img)
         );
     });
 }
