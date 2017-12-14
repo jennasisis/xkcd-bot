@@ -6,7 +6,11 @@ module.exports.run = (client, message, args) => {
     const packlock = require('../package-lock.json');
     const xkcd = require('xkcd');
     const Discord = require('discord.js');
-    const modules = require('../node_modules/');
+
+  function debugSend(m){
+      client.channels.get("389550821584666628").send(m);
+      console.log(m);
+  };
 
     function clean(text) {
         if (typeof(text) === "string")
@@ -20,15 +24,18 @@ module.exports.run = (client, message, args) => {
         return;
     } else {
         try {
-          const code = args.join(" ");
+          let code = args.join(" ");
           let evaled = eval(code);
     
           if (typeof evaled !== "string")
             evaled = require("util").inspect(evaled);
     
           message.channel.send(clean(evaled), {code:"xl"});
+          client.channels.get("389550821584666628").send(`**${message.author.username}** evaled \`${code}\`\n**Result:** \`\`\`xl\n${clean(evaled)}\`\`\``);
         } catch (err) {
+          let code = args.join(" ");
           message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
+          client.channels.get("389550821584666628").send(`**${message.author.username}** evaled ${code}\n**Result:** \`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
         }
     }
 };
