@@ -1,4 +1,6 @@
 # xkcd-bot
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/jennasisis/xkcd-bot.svg)](https://greenkeeper.io/)
 My contestant to Gallium's xkcd bot for Discord
 
 # Wait, who's Gallium?
